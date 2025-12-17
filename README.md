@@ -67,6 +67,24 @@ Course: Java Programming by Prof.Aidana, Avg GPA: 3.5200000000000005
 Top credits student: Student: Qailau Marat (ID: 253696), Major: CS, GPA: 3.8, Credits: 15
 ```
 
+Вставь этот блок в конец README.md как отдельный раздел.
+
+### UML Diagram
+
+This project also includes a simple UML class diagram that shows the main structure of the system.  
+The diagram focuses on the two main classes, `Student` and `Course`, and how they are related in the program.
+
+The **`Student`** class is shown with private fields for `name`, `id`, `major`, `gpa`, and `credits`.  
+It also includes public methods such as the constructor, getters and setters, `addCredits(int c)`, `updateGPA(double newGpa)`, `isHonors()`, and `toString()`.
+
+The **`Course`** class is shown with private fields for `courseName`, `instructor`, and an array of `Student` objects called `students`.  
+Its public methods include the constructor, `addStudent(Student s, int index)`, `courseAverageGPA()`, `highestCreditStudent()`, and `toString()`.
+
+The diagram uses a **composition relationship** from `Course` to `Student`.  
+This means that one course *contains* many students, which matches the Java code where `Course` stores a `Student[]` array.
+
+The UML diagram is saved as `docs/uml-diagram.png` inside the project.  
+It helps to visualize the object-oriented design of the student management system and makes the relationships between classes easier to understand.
 ## Reflection
 
 I learned how encapsulation works with private fields and public methods. Getters and setters control access to student data safely.

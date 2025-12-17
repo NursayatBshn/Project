@@ -1,0 +1,37 @@
+@startuml
+
+class Student {
+  - name : String
+  - id : String
+  - major : String
+  - gpa : double
+  - credits : int
+  + Student(name : String, id : String, major : String)
+  + getName() : String
+  + getId() : String
+  + getMajor() : String
+  + getGpa() : double
+  + getCredits() : int
+  + setName(name : String) : void
+  + setId(id : String) : void
+  + setMajor(major : String) : void
+  + addCredits(c : int) : void
+  + updateGPA(newGpa : double) : void
+  + isHonors() : boolean
+  + toString() : String
+}
+
+class Course {
+  - courseName : String
+  - instructor : String
+  - students : Student[]
+  + Course(courseName : String, instructor : String, size : int)
+  + addStudent(s : Student, index : int) : void
+  + courseAverageGPA() : double
+  + highestCreditStudent() : Student
+  + toString() : String
+}
+
+Course "1" o-- "*" Student : contains
+
+@enduml
