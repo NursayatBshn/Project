@@ -27,7 +27,7 @@ public class Main {
         return total;
     }
 
-    public static void main(String[] args) {  // ← String[] args, не Student[]
+    public static void main(String[] args) {
         Student[] students = {
                 new Student("Qailau Marat", "253696", "CS"),
                 new Student("Palensgeev Tugenshe", "252496", "SE"),
@@ -36,26 +36,23 @@ public class Main {
                 new Student("Qaisar Medeu", "257593", "MT")
         };
 
-        // Исправляем кредиты - каждому свои
         students[0].updateGPA(3.8); students[0].addCredits(15);
         students[1].updateGPA(3.2); students[1].addCredits(12);
         students[2].updateGPA(3.9); students[2].addCredits(18);
-        students[3].updateGPA(4.0); students[3].addCredits(20);  // ← было students[2]
-        students[4].updateGPA(2.7); students[4].addCredits(10);  // ← было students[2]
+        students[3].updateGPA(4.0); students[3].addCredits(20);
+        students[4].updateGPA(2.7); students[4].addCredits(10);
 
-        // Вывод студентов ← ВСЁ внутри main()
         for (Student s : students) {
             System.out.println(s);
         }
 
         System.out.println("Top GPA: " + getTopStudent(students));
         System.out.println("Honors count: " + countHonors(students));
-        System.out.println("Total credits: " + totalCredits(students));  // ← students
+        System.out.println("Total credits: " + totalCredits(students));
 
-        // Создаём курс ← правильно
         Course courseObj = new Course("Java Programming", "Prof.Aidana", 5);
         for (int i = 0; i < 5; i++) {
-            courseObj.addStudent(students[i], i);  // ← courseObj
+            courseObj.addStudent(students[i], i);
         }
         System.out.println(courseObj);
         System.out.println("Top credits student: " + courseObj.highestCreditStudent());
