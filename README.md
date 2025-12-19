@@ -67,8 +67,6 @@ Course: Java Programming by Prof.Aidana, Avg GPA: 3.5200000000000005
 Top credits student: Student: Qailau Marat (ID: 253696), Major: CS, GPA: 3.8, Credits: 15
 ```
 
-Вставь этот блок в конец README.md как отдельный раздел.
-
 ### UML Diagram
 
 This project also includes a simple UML class diagram that shows the main structure of the system.  

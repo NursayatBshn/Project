@@ -35,5 +35,4 @@ public class Student {
     public String toString() {
         return "Student: " + name + " (ID: " + id + "), Major: " + major + ", GPA: " + gpa + ", Credits: " + credits;
     }
-
 }
